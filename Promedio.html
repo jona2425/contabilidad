@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Cambiado el idioma a español -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Método Promedio</title>
+    <style>
+      /* Estilo general del cuerpo */
+      body {
+        background-color: #cee2f4; /* Color de fondo claro */
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Estilo para centrar títulos */
+      h2 {
+        text-align: center; /* Centrar títulos */
+        color: #333; /* Color del texto de los títulos */
+      }
+
+      /* Estilo para formularios */
+      form {
+        max-width: 400px; /* Ancho máximo del formulario */
+        margin: 20px auto; /* Centrar el formulario */
+        padding: 30px;
+        background-color: #a0d0e6; /* Fondo azul claro para el formulario */
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Estilo para etiquetas y campos de entrada */
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      input[type="date"],
+      input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      /* Estilo para botones */
+      button {
+        padding: 10px;
+        background-color: #397e7d; /* Color verde para los botones */
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+        display: block;
+        margin: 10px auto; /* Centrar los botones */
+        width: 50%; /* Botones ocupan el 100% del ancho del formulario */
+      }
+      #volverBtn {
+        padding: 5px; /* Ajusta el relleno (padding) del botón */
+        font-size: 14px; /* Tamaño de la fuente más pequeño */
+        width: 20%; /* Cambia el ancho a un 30% del formulario */
+        background-color: #397e7d; /* Mantiene el color verde */
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+      }   
+
+      /* Estilos para la tabla */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px auto;
+      }
+
+      th, td {
+        padding: 8px;
+        text-align: left;
+        border: 1px solid black; /* Color negro para las líneas de separación */
+        }
+
+      th {
+        background-color: #397e7d;
+        color: white;
+      }
+
+      tr:nth-child(even) {
+        background-color: #beb7b7;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- Formulario para ingresar las compras (entradas de inventario) -->
+    <h2>Entradas de Inventario (Compras)</h2>
+    <form id="purchaseForm">
+      <label for="purchaseDate">Fecha:</label>
+      <input type="date" id="purchaseDate" required /><br /><br />
+
+      <label for="purchaseQuantity">Cantidad Compras:</label>
+      <input type="number" id="purchaseQuantity" required /><br /><br />
+
+      <label for="purchaseUnitCost">Costo Unitario Compras:</label>
+      <input
+        type="number"
+        id="purchaseUnitCost"
+        step="0.01"
+        required
+      /><br /><br />
+
+      <button type="submit">Agregar Compra</button>
+    </form>
+
+    <!-- Formulario para ingresar las ventas (salidas de inventario) -->
+    <h2>Salidas de Inventario (Ventas)</h2>
+    <form id="salesForm">
+      <label for="salesDate">Fecha:</label>
+      <input type="date" id="salesDate" required /><br /><br />
+
+      <label for="salesQuantity">Cantidad Ventas:</label>
+      <input type="number" id="salesQuantity" required /><br /><br />
+
+      <button type="submit">Agregar Venta</button>
+    </form>
+
+    <!-- Botón para volver -->
+    <button id="volverBtn" onclick="window.history.back()">Volver</button>
+
+    <!-- Contenedor donde se mostrará la tabla WAC -->
+    <h2>Tabla de Inventario (Promedio)</h2>
+    <div id="table-wac-container"></div>
+
+    <!-- Incluyendo el script JavaScript -->
+    <script src="wac.js"></script>
+  </body>
+</html>
+ 
+
+
+

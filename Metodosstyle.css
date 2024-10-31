@@ -1,0 +1,66 @@
+.contenedor {
+    display: flex;
+    height: 100vh; /* Altura de la ventana completa */
+}
+
+  /* Mitad izquierda para la imagen */
+.izquierda {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #010101; /* Color de fondo opcional */
+}
+
+.izquierda img {
+    max-width: 500%;
+    max-height: 100%;
+}
+
+  /* Mitad derecha para el título y los botones */
+.derecha {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: darkcyan; /* Color de fondo opcional */
+}
+
+  /* Estilo del título */
+.titulo {
+    font-size: 3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 30px;
+    color: black;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Añadir sombra al texto */
+}
+
+
+.boton {
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    color: black;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: 4rem;
+    text-decoration: none;
+    height: 5rem;
+    width: 12rem;
+    font-weight: 800;
+    background-color: #63aedd;
+    margin: 10px;
+    cursor: pointer;
+    text-align: center; /* Para centrar el texto */
+    display: flex;
+    align-items: center; /* Alinea el texto verticalmente */
+    justify-content: center; /* Alinea el texto horizontalmente */
+    box-shadow: 5px 5px 15px rgba(17, 3, 3, 0.733); /* Añadir sombra */
+}
+
+
+
+.boton:hover {
+    background-color: #286da6;
+}

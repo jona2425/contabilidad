@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="manifest" href="manifest.json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+<body>
+    <div class="contenedor">
+        <section class="contenedors">
+<h2>Formulario de Registro</h2>
+            <form class="form" action="">
+                <fieldset>
+                    <legend>Completa los Campos</legend>
+                    <div class="contenedorDiv">
+                        <div class="campo">
+                            <label for="">Nombre:</label>
+                            <input type="text" name="nombre"
+                            class="nombre" placeholder="Tú Nombre">
+                        </div>
+                        <div class="campo">
+                            <label for="">E-mail:</label>
+                            <input type="text" name="email"
+                            class="email" placeholder="Tú E-mail">
+                        </div>
+                        <div class="campo">
+                            <label for="">Telefono:</label>
+                            <input type="text" name="telefono"
+                            class="telefono" placeholder="Tú Telefono">
+                        </div>
+                        <div class="campo">
+                            <label for="">Contraseña:</label>
+                            <input type="text" name="contrasena"
+                            class="contrasena" placeholder="Tú Contraseña">
+                        </div>
+                        <div class="campo">
+                            <label for="">Re-Contraseña:</label>
+                            <input type="text" name="contrasena"
+                            class="contrasena" placeholder="Repite Contraseña">
+                        </div>
+                        
+
+                    </div>
+                    
+                    <div>
+                        <a href="Metodos.html" class="boton">Enviar</a>
+                    </div>
+                
+                    <h3><a href="Registro.html">¿Ya tengo una cuenta?</a></h3>
+
+
+                </fieldset>
+            </form>
+
+        </section>
+
+    </div>
+   
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker
+                    .register("/sw.js") // Asegúrate de que sw.js esté en la raíz de tu proyecto
+                    .then((reg) => console.log("Service Worker registrado", reg))
+                    .catch((err) => console.log("Error en el registro del Service Worker", err));
+            });
+        }
+    
+</body>
+</html>
